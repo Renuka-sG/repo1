@@ -1,0 +1,21 @@
+name: Concurrency workflow
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo statement
+        run: |
+          echo "First echo statement"
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: sleep 100 secs
+        run: |
+          sleep 100

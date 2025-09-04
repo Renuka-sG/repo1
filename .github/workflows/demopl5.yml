@@ -3,13 +3,19 @@ on:
   push:
     branches:
       - main
- 
+env:
+  workflowVar1: workflowvalue1
+      
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      jobVar1: jobvalue1
     steps:
       - name: step1
         env:
           stepVar1: stepvalue1
         run: |
           echo "The value for stepvar1: $stepVar1"
+          echo "The value for jobvar1: $jobVar1"
+          echo "The value for workflowvar1: $workflowVar1"

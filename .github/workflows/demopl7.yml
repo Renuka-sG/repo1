@@ -1,4 +1,4 @@
-name: Concurrency workflow
+name: timeout workflow
 on:
   push:
     branches:

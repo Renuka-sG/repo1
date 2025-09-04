@@ -1,8 +1,8 @@
-name: My First Workflow
+name: My Second Workflow
 on: push
 
 jobs:
-    first_job:
+    second_job:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4

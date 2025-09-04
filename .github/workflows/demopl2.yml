@@ -1,0 +1,14 @@
+name: My First Workflow
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - name: List and Read files
+            run: |
+              echo "My first Github Actions Job"
+              ls 
+              chmod +x hello.sh
+              ./hello.sh

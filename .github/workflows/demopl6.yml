@@ -14,8 +14,12 @@ jobs:
 
   job2:
     needs: job1
+    concurrency: 
+      group: production-deployment
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: sleep 100 secs
         run: |
-          sleep 100
+          sleep 10
+        
